@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.slider {
+  width:300px;
+  height:200px;
+  position:relative;
+  margin-top:10px;
+}
+
+.slider img {
+  width:300px;
+  height:200px;
+  position:absolute;
+  top:0;
+  left:0;
+  opacity:0;
+}
+
+/* Show image when radio is checked */
+#r1:checked ~ .slider .img1 { opacity:1; }
+#r2:checked ~ .slider .img2 { opacity:1; }
+#r3:checked ~ .slider .img3 { opacity:1; }
+</style>
+</head>
+<body>
+
+<!-- Radio buttons MUST come before slider -->
+<input type="radio" name="slide" id="r1" checked> Image 1
+<input type="radio" name="slide" id="r2"> Image 2
+<input type="radio" name="slide" id="r3"> Image 3
+
+<div class="slider">
+  <img src="1.jpg" class="img1">
+  <img src="2.jpg" class="img2">
+  <img src="3.jpg" class="img3">
+</div>
+
+</body>
+</html>
