@@ -1,0 +1,13 @@
+<script>
+function validate(){
+if(document.f1.name.value==""){
+alert("Enter name");
+return false;
+}
+}
+</script>
+
+<form name="f1" onsubmit="return validate()">
+<input type="text" name="name">
+<input type="submit">
+</form>
