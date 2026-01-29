@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Website Visitor Counter</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #11998e, #38ef7d);
+            text-align: center;
+            color: white;
+            padding-top: 150px;
+        }
+
+        .box {
+            background-color: rgba(0,0,0,0.4);
+            padding: 40px;
+            width: 400px;
+            margin: auto;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <h2>Welcome to My Website</h2>
+    <h3>Total Visitors</h3>
+    <h1 id="count"></h1>
+</div>
+
+<script>
+    if (localStorage.getItem("visitCount") === null) {
+        localStorage.setItem("visitCount", 1);
+    } else {
+        let count = parseInt(localStorage.getItem("visitCount"));
+        count++;
+        localStorage.setItem("visitCount", count);
+    }
+
+    document.getElementById("count").innerHTML =
+        localStorage.getItem("visitCount");
+</script>
+
+</body>
+</html>
